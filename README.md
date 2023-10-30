@@ -12,15 +12,19 @@ Este é um simulador de biblioteca simples desenvolvido usando Node.js, PostgreS
 
 ## :ladder: Fucionalidades do Projeto
 
-- [x] Cálculo de Frete
+- [x] Listar Usuarios pelo ID informado
+- [x] Cadastros de Livros e Autores
 - [x] Acesso Fácil
 - [x] Testes Rápidos
 - [x] Desenvolvimento Contínuo
+- [ ] Atualização de dados
+- [ ] Deletar Autores e Livros
 
 ## :facepunch: Como Usar
 
 - Clone o repositório para sua máquina local.
 - No terminal, navegue até o diretório do projeto e execute npm install para instalar as dependências.
+- Na parte de configurações do PostgreSQL insira os seus respectivos dados.
 - Inicie o servidor usando npm run dev. O Nodemon garantirá que o servidor seja reiniciado automaticamente após cada alteração no código.
 - Utilize o Insomnia ou qualquer outra ferramenta de teste de API para enviar requisições para os endpoints fornecidos pela API.
 
@@ -48,7 +52,8 @@ npm run dev
 
 ## :sassy_man: Endpoints
 
-- GET /produtos - Lista todos os produtos
-- GET /produtos/:id - Buscar o Produto pelo seu ID
-- GET /produtos/:id/frete/:cep- Calcula o valor do frete através do CEP informado
+- POST /autor/:id/livro - Cadastra livros através do id informado do autor
+- GET /autor/:id - Buscar o autor pelo seu ID
+- POST /autor - Cadastra um autor novo
+- GET /livro - Listagem de todos os livros e seus respectivos autores
 
